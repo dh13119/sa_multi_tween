@@ -13,7 +13,7 @@ MultiTrack is a **powerful** `Animateable` that animates multiple properties at 
 
 ## 📝 Example
 
-> Note: This example uses **[supercharged](https://pub.dev/packages/supercharged)** package for syntactic sugar and **simple_animations** 
+> Note: This example uses **[supercharged](https://pub.dev/packages/supercharged)** package for syntactic sugar and **[simple_animations](https://pub.dev/packages/simple_animations)** 
 > for using `ControlledAnimation` widget.
 
 ```dart
