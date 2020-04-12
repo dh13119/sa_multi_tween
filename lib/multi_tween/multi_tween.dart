@@ -4,7 +4,7 @@ import 'package:supercharged/supercharged.dart';
 class MultiTween<P> extends Animatable<MultiTweenAnimatable<P>> {
   final _tracks = Map<P, _TweenTrack>();
 
-  get duration => _tracks.values
+  Duration get duration => _tracks.values
       .map((track) => track.duration)
       .maxBy((a, b) => a.compareTo(b));
 
@@ -37,19 +37,19 @@ class MultiTweenAnimatable<P> {
 
     for (var tweenWithDuration in track.tweensWithDuration) {
       final tweenDurationInTimeDecimals =
-          _divideDurations(tweenWithDuration.duration, _maxDuration);
+          tweenWithDuration.duration / _maxDuration;
 
       // We need to figure out which tween-slice of track applied to the requested time (t)
       if (time < timeWhenTweenStarts + tweenDurationInTimeDecimals) {
         final normalizedTime =
             (time - timeWhenTweenStarts) / tweenDurationInTimeDecimals;
-        return tweenWithDuration.tween.transform(normalizedTime);
+        return tweenWithDuration.tween.transform(normalizedTime) as T;
       }
       timeWhenTweenStarts += tweenDurationInTimeDecimals;
     }
 
     // the for-loop above doesn't catches t=1.0, that's why we handle this case manually
-    return track.tweensWithDuration.last.tween.transform(1.0);
+    return track.tweensWithDuration.last.tween.transform(1.0) as T;
   }
 }
 
@@ -60,9 +60,9 @@ class _TweenTrack {
     tweensWithDuration.add(_TweenWithDuration(tween, duration));
   }
 
-  get duration => tweensWithDuration
-      .map((it) => it.duration)
-      .reduce((value, it) => value + it);
+  Duration get duration => tweensWithDuration
+      .map((tweenWithDuration) => tweenWithDuration.duration)
+      .reduce((value, duration) => value + duration);
 }
 
 class _TweenWithDuration {
@@ -71,7 +71,3 @@ class _TweenWithDuration {
 
   _TweenWithDuration(this.tween, this.duration);
 }
-
-// TODO maybe supercharged function
-_divideDurations(Duration a, Duration b) =>
-    a.inMicroseconds.toDouble() / b.inMicroseconds.toDouble();

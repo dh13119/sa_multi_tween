@@ -22,9 +22,9 @@ enum AniProps { width, height }
 
 // Specify MultiTween
 final _tween = MultiTween<AniProps>()
-  ..add(AniProps.width, Tween(begin: 0.0, end: 100.0), 1000.milliseconds)
-  ..add(AniProps.width, Tween(begin: 100.0, end: 200.0), 500.milliseconds)
-  ..add(AniProps.height, Tween(begin: 0.0, end: 200.0), 2500.milliseconds);
+  ..add(AniProps.width, 0.0.tweenTo(100.0), 1000.milliseconds)
+  ..add(AniProps.width, 100.0.tweenTo(200.0), 500.milliseconds)
+  ..add(AniProps.height, 0.0.tweenTo(200.0), 2500.milliseconds)
 ```
 
 Use the created `_tween` in your `builder()` function:
@@ -35,10 +35,10 @@ ControlledAnimation<MultiTweenAnimatable<AniProps>>(
   duration: _tween.duration,
   builder: (context, animation) {
     return Container(
-      // Get animated width as double value
-      width: animation.get<double>(AniProps.width),
-      // Get animated height as double value
-      height: animation.get<double>(AniProps.height),
+      // Get animated width value
+      width: animation.get(AniProps.width),
+      // Get animated height value
+      height: animation.get(AniProps.height),
       color: Colors.yellow,
     );
   },
@@ -52,7 +52,7 @@ You can also use the [`DefaultAnimationProperties`](https://github.com/felixblas
 > Example:
 ```dart
 final _tween = MultiTween<DefaultAnimationProperties>()
-  ..add(DefaultAnimationProperties.width, Tween(begin: 0.0, end: 100.0), 1000.milliseconds)
+  ..add(DefaultAnimationProperties.width, 0.0.tweenTo(100.0), 1000.milliseconds)
 ```
 
 ### Use own durations
@@ -67,8 +67,8 @@ ControlledAnimation<MultiTweenAnimatable<AniProps>>(
   duration: Durations(seconds: 3),
   builder: (context, animation) {
     return Container(
-      width: animation.get<double>(AniProps.width),
-      height: animation.get<double>(AniProps.height),
+      width: animation.get(AniProps.width),
+      height: animation.get(AniProps.height),
       color: Colors.yellow,
     );
   },
