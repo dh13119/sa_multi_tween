@@ -1,7 +1,6 @@
 name: sa_multi_tween
 description: Simple Animations MultiTween
-version: 0.0.1
-author: Felix Blaschke
+version: 0.0.2
 homepage: https://github.com/felixblaschke/sa_multi_tween
 
 environment:
@@ -10,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  supercharged: 1.2.1
+  supercharged: ^1.2.1
 
 dev_dependencies:
   flutter_test:

@@ -2,9 +2,9 @@
 
 > ⚠ Note: This project is still in development. Don't use it in production for now.
 
-# MultiTrack 
+# MultiTween 
 
-MultiTrack is a **powerful** `Animateable` that animates multiple properties at once. Typical use cases are
+MultiTween is a **powerful** `Animateable` that animates multiple properties at once. Typical use cases are
 
 - Staggered animations by **combining multiple** tweens
 - Multiple properties (i.e. color and width) are animated **simultaneously**
