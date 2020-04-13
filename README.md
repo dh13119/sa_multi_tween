@@ -1,8 +1,6 @@
 *This project is part of the [Simple Animations Framework](https://pub.dev/packages/simple_animations)*
 
-**⚠ Note: This project is still in development. Don't use it in production for now.**
-
-# ⦷ MultiTween 
+# ⦷ MultiTween
 
 MultiTween is a **powerful** `Animateable` that animates multiple properties at once.
 
@@ -19,7 +17,7 @@ Add MultiTween to your project by following the instructions on the
 **[install page](https://pub.dev/packages/sa_multi_tween#-installing-tab-)**.
 
 *Note: Code snippets from this page use
-[**supercharged**](https://pub.dev/packages/supercharged)**
+[**supercharged**](https://pub.dev/packages/supercharged)
 package for syntactic sugar and 
 [**simple_animations**](https://pub.dev/packages/simple_animations)
 for using `ControlledAnimation` widget.*
