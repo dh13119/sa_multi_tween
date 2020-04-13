@@ -1,6 +1,10 @@
 
-Note: This example uses **[supercharged](https://pub.dev/packages/supercharged)** package for syntactic sugar and **[simple_animations](https://pub.dev/packages/simple_animations)** 
+# 📝 Examples
+
+Note: These examples uses **[supercharged](https://pub.dev/packages/supercharged)** package for syntactic sugar and **[simple_animations](https://pub.dev/packages/simple_animations)** 
 for using `ControlledAnimation` widget.
+
+## Simple use case
 
 ```dart
 import 'package:flutter/material.dart';
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: ControlledAnimation<MultiTweenAnimatable<AniProps>>(
+          child: ControlledAnimation<MultiTweenValues<AniProps>>(
             tween: _tween,
             // Obtain duration from MultiTween
             duration: _tween.duration,

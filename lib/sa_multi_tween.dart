@@ -1,4 +1,7 @@
 library sa_multi_tween;
 
-export 'multi_tween/multi_tween.dart';
-export 'multi_tween/default_animation_properties.dart';
+import 'package:flutter/widgets.dart';
+import 'package:supercharged/supercharged.dart';
+
+part 'multi_tween/default_animation_properties.dart';
+part 'multi_tween/multi_tween.dart';
