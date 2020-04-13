@@ -13,20 +13,24 @@ single animation.
 
 ## ⛏ Usage
 
+🛈 *The following code snippets use
+[**supercharged**](https://pub.dev/packages/supercharged)
+package for syntactic sugar and widgets from
+[**simple_animations**](https://pub.dev/packages/simple_animations)
+.*
+
+### Getting started
+
 Add MultiTween to your project by following the instructions on the 
 **[install page](https://pub.dev/packages/sa_multi_tween#-installing-tab-)**.
 
-*Note: Code snippets from this page use
-[**supercharged**](https://pub.dev/packages/supercharged)
-package for syntactic sugar and 
-[**simple_animations**](https://pub.dev/packages/simple_animations)
-for using `ControlledAnimation` widget.*
+To learn how to use MultiTween:
 
-You can find complete examples at the 
+- Continue reading this page
+- Study complete examples at
 [**example page**](https://pub.dev/packages/sa_multi_tween#-example-tab-)
-or want to discover the
-[**API docs**](https://pub.dev/documentation/sa_multi_tween/latest/sa_multi_tween/sa_multi_tween-library.html)
-.
+- Discover the
+[**API documentation**](https://pub.dev/documentation/sa_multi_tween/latest/sa_multi_tween/sa_multi_tween-library.html)
 
 ### Basic usage pattern
 
