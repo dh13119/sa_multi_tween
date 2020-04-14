@@ -6,8 +6,7 @@ MultiTween is a **powerful** `Animateable` that animates multiple properties at 
 
 ## 🌞 Highlights
 
-- **Animate multiple properties** (for example width, height and color) at once inside a
-single animation.
+- **Animate multiple properties** (for example width, height and color) at once inside a single animation.
 
 - **Chain multiple tweens** to create complex animations.
 
