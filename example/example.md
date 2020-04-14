@@ -1,8 +1,7 @@
 
 # 📝 Examples
 
-Note: These examples uses **[supercharged](https://pub.dev/packages/supercharged)** package for syntactic sugar and **[simple_animations](https://pub.dev/packages/simple_animations)** 
-for using `ControlledAnimation` widget.
+🛈 *Note: These examples uses **[supercharged](https://pub.dev/packages/supercharged)** for syntactic sugar.*
 
 ## Animate multiple properties
 

@@ -4,12 +4,12 @@ version: 0.0.7
 homepage: https://github.com/felixblaschke/sa_multi_tween
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  supercharged: ^1.3.0
+  supercharged: ^1.4.0
 
 dev_dependencies:
   flutter_test:

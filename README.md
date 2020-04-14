@@ -12,11 +12,7 @@ MultiTween is a **powerful** `Animateable` that animates multiple properties at 
 
 ## ⛏ Usage
 
-🛈 *The following code snippets use
-[**supercharged**](https://pub.dev/packages/supercharged)
-package for syntactic sugar and widgets from
-[**simple_animations**](https://pub.dev/packages/simple_animations)
-.*
+🛈 *The following code snippets use [**supercharged**](https://pub.dev/packages/supercharged) for syntactic sugar.*
 
 ### Getting started
 
@@ -48,7 +44,7 @@ final _tween = MultiTween<AniProps>()
   ..add(AniProps.height, 0.0.tweenTo(200.0), 2500.milliseconds)
 ```
 
-Pass the created `_tween` to your favorite animation builder framework. Here we use the `ControlledAnimation` widget from *[simple_animations](https://pub.dev/packages/simple_animations)*. 
+Pass the created `_tween` to your favorite animation builder framework. Here we use the Simple Animations's `ControlledAnimation` widget. 
 
 ```dart
 ControlledAnimation<MultiTweenValues<AniProps>>(
