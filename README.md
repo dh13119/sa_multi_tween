@@ -20,8 +20,8 @@ package for syntactic sugar and widgets from
 
 ### Getting started
 
-Add MultiTween to your project by following the instructions on the 
-**[install page](https://pub.dev/packages/sa_multi_tween#-installing-tab-)**.
+Add **Simple Animations** to your project by following the instructions on the 
+**[install page](https://pub.dev/packages/simple_animations#-installing-tab-)**.
 
 To learn how to use MultiTween:
 

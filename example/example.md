@@ -12,7 +12,6 @@ This example animates width, height and color of a box.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sa_multi_tween/sa_multi_tween.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
 
@@ -66,7 +65,6 @@ This example moves a box clockwise in a rectangular pattern.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sa_multi_tween/sa_multi_tween.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
 
@@ -135,7 +133,6 @@ This example combines aspects of the examples above, including chaining and mult
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sa_multi_tween/sa_multi_tween.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
 
