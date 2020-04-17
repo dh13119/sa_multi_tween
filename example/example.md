@@ -20,7 +20,7 @@ void main() => runApp(MyApp());
 enum AniProps { width, height, color }
 
 class MyApp extends StatelessWidget {
-  
+
   // Specify your tween
   final _tween = MultiTween<AniProps>()
     ..add(AniProps.width, 0.0.tweenTo(100.0), 1000.milliseconds)
@@ -34,14 +34,14 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: ControlledAnimation<MultiTweenValues<AniProps>>(
+          child: PlayAnimation<MultiTweenValues<AniProps>>(
             tween: _tween, // Pass in tween
             duration: _tween.duration, // Obtain duration from MultiTween
-            builder: (context, animation) {
+            builder: (context, child, value) {
               return Container(
-                width: animation.get(AniProps.width), // Get animated value for width
-                height: animation.get(AniProps.height), // Get animated value for height
-                color: animation.get(AniProps.color), // Get animated value for color
+                width: value.get(AniProps.width), // Get animated value for width
+                height: value.get(AniProps.height), // Get animated value for height
+                color: value.get(AniProps.color), // Get animated value for color
               );
             },
           ),
@@ -98,13 +98,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: ControlledAnimation<MultiTweenValues<AniProps>>(
+          child: LoopAnimation<MultiTweenValues<AniProps>>(
             tween: _tween, // Pass in tween
             duration: _tween.duration, // Obtain duration from MultiTween
-            playback: Playback.LOOP,
-            builder: (context, animation) {
+            builder: (context, child, value) {
               return Transform.translate(
-                offset: animation.get(AniProps.offset), // Get animated offset
+                offset: value.get(AniProps.offset), // Get animated offset
                 child: Container(
                   width: 100,
                   height: 100,
@@ -144,22 +143,22 @@ class MyApp extends StatelessWidget {
   // Specify your tween
   final _tween = MultiTween<AniProps>()
     ..add(
-        // top left => top right
+      // top left => top right
         AniProps.offset,
         Tween(begin: Offset(-100, -100), end: Offset(100, -100)),
         1000.milliseconds, Curves.easeInOutSine)
     ..add(
-        // top right => bottom right
+      // top right => bottom right
         AniProps.offset,
         Tween(begin: Offset(100, -100), end: Offset(100, 100)),
         1000.milliseconds, Curves.easeInOutSine)
     ..add(
-        // bottom right => bottom left
+      // bottom right => bottom left
         AniProps.offset,
         Tween(begin: Offset(100, 100), end: Offset(-100, 100)),
         1000.milliseconds, Curves.easeInOutSine)
     ..add(
-        // bottom left => top left
+      // bottom left => top left
         AniProps.offset,
         Tween(begin: Offset(-100, 100), end: Offset(-100, -100)),
         1000.milliseconds, Curves.easeInOutSine)
@@ -173,17 +172,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: ControlledAnimation<MultiTweenValues<AniProps>>(
+          child: LoopAnimation<MultiTweenValues<AniProps>>(
             tween: _tween, // Pass in tween
             duration: _tween.duration, // Obtain duration from MultiTween
-            playback: Playback.LOOP,
-            builder: (context, animation) {
+            builder: (context, child, value) {
               return Transform.translate(
-                offset: animation.get(AniProps.offset), // Get animated offset
+                offset: value.get(AniProps.offset), // Get animated offset
                 child: Container(
                   width: 100,
                   height: 100,
-                  color: animation.get(AniProps.color), // Get animated color
+                  color: value.get(AniProps.color), // Get animated color
                 ),
               );
             },

@@ -41,23 +41,23 @@ Invoke the `add` method to arrange your animation.
 final _tween = MultiTween<AniProps>()
   ..add(AniProps.width, 0.0.tweenTo(100.0), 1000.milliseconds)
   ..add(AniProps.width, 100.0.tweenTo(200.0), 500.milliseconds)
-  ..add(AniProps.height, 0.0.tweenTo(200.0), 2500.milliseconds)
+  ..add(AniProps.height, 0.0.tweenTo(200.0), 2500.milliseconds);
 ```
 
-Pass the created `_tween` to your favorite animation builder framework. Here we use the Simple Animations's `ControlledAnimation` widget. 
+Use the created `_tween` with your favorite animation technique. Here we use the `PlayAnimation` widget provided by **Simple Animations**. 
 
 ```dart
-ControlledAnimation<MultiTweenValues<AniProps>>(
+PlayAnimation<MultiTweenValues<AniProps>>(
   tween: _tween, // Pass in tween
   duration: _tween.duration, // Pass in total duration obtained from MultiTween
-  builder: (context, animation) {
+  builder: (context, child, value) {
     return Container(
-      width: animation.get(AniProps.width), // Get animated width value
-      height: animation.get(AniProps.height), // Get animated height value
+      width: value.get(AniProps.width), // Get animated width value
+      height: value.get(AniProps.height), // Get animated height value
       color: Colors.yellow,
     );
   },
-),
+);
 ```
 
 ### Using the predefined enum for animation properties
@@ -69,7 +69,7 @@ If you feel lazy can also use the [`DefaultAnimationProperties`](https://github.
 
 ```dart
 final _tween = MultiTween<DefaultAnimationProperties>()
-  ..add(DefaultAnimationProperties.width, 0.0.tweenTo(100.0), 1000.milliseconds)
+  ..add(DefaultAnimationProperties.width, 0.0.tweenTo(100.0), 1000.milliseconds);
 ```
 
 ### Some notes on using durations
@@ -83,17 +83,17 @@ The `MultiTween` tracks the duration for each property you specified when arrang
 You also also use your own `Duration`. MultiTween will automatically lengthen or shorten the tween animation.
 
 ```dart
-ControlledAnimation<MultiTweenValues<AniProps>>(
+PlayAnimation<MultiTweenValues<AniProps>>(
   tween: _tween,
-  duration: Durations(seconds: 3), // Use own duration
-  builder: (context, animation) {
+  duration: 3.seconds, // Use own duration
+  builder: (context, child, value) {
     return Container(
-      width: animation.get(AniProps.width),
-      height: animation.get(AniProps.height),
+      width: value.get(AniProps.width),
+      height: value.get(AniProps.height),
       color: Colors.yellow,
     );
   },
-),
+);
 ```
 
 #### Default duration when adding tweens to MultiTween
@@ -123,7 +123,7 @@ After a second the `width` reaches it's target value of `100.0`. Meanwhile the `
 You can make your animation more interesting by adding non-linear tweens.
 When adding your tweens you can use the (optional) fourth parameter to specify a `Curve`.
 
-🛈 *Flutter offers predefined curves inside the `Curves` class.*
+Flutter comes with a set of predined curves inside the `Curves` class.
 
 ```dart
 final tween = MultiTween<DefaultAnimationProperties>()
