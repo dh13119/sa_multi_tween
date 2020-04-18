@@ -123,7 +123,7 @@ After a second the `width` reaches it's target value of `100.0`. Meanwhile the `
 You can make your animation more interesting by adding non-linear tweens.
 When adding your tweens you can use the (optional) fourth parameter to specify a `Curve`.
 
-Flutter comes with a set of predined curves inside the `Curves` class.
+Flutter comes with a set of predefined curves inside the `Curves` class.
 
 ```dart
 final tween = MultiTween<DefaultAnimationProperties>()
