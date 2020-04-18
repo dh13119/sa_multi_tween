@@ -17,8 +17,13 @@ enum DefaultAnimationProperties {
   color2,
   color3,
   color4,
+  x,
+  y,
+  size,
   left,
   top,
   bottom,
   right,
+  rotation,
+  scale
 }
