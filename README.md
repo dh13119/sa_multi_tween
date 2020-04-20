@@ -1,6 +1,6 @@
 *This project is part of the [Simple Animations Framework](https://pub.dev/packages/simple_animations)*
 
-# ⦷ MultiTween
+# 🎭 MultiTween
 
 MultiTween is a **powerful** `Animateable` that animates multiple properties at once.
 
