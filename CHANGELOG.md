@@ -1,3 +1,3 @@
-## all version untils [0.0.10]
+## 1.0.0
 
-- experimenting with api
+- **New:** MultiTween

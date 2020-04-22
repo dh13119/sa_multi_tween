@@ -1,6 +1,6 @@
 name: sa_multi_tween
 description: MultiTween (part of Simple Animations Framework) can animate multiple properties at once.
-version: 0.0.10
+version: 1.0.0
 homepage: https://github.com/felixblaschke/sa_multi_tween
 
 environment:
