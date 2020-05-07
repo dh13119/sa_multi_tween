@@ -75,7 +75,7 @@ class MultiTween<P> extends Animatable<MultiTweenValues<P>> {
   ///  ..add(DefaultAnimationProperties.color, Colors.red.tweenTo(Colors.blue), 3.seconds,
   ///      Curves.easeInOutSine);
   /// ```
-  void add(P property, Tween tween,
+  void add(P property, Animatable tween,
       [Duration duration = const Duration(seconds: 1),
       Curve curve = Curves.linear]) {
     if (!_tracks.containsKey(property)) {
