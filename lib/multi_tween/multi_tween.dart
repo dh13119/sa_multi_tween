@@ -20,7 +20,7 @@ part of sa_multi_tween;
 /// If you don't want to define your own enum, you can use
 /// [DefaultAnimationProperties] that comes with MultiTween.
 class MultiTween<P> extends Animatable<MultiTweenValues<P>> {
-  final _tracks = Map<P, _TweenTrack>();
+  final _tracks = <P, _TweenTrack>{};
 
   /// Returns the maximum duration of all properties.
   ///
@@ -87,7 +87,7 @@ class MultiTween<P> extends Animatable<MultiTweenValues<P>> {
 
   /// Returns a [MultiTweenValues] that is used to get the animated values.
   @override
-  transform(double t) => MultiTweenValues<P>(this.duration, _tracks, t);
+  MultiTweenValues<P> transform(double t) => MultiTweenValues<P>(duration, _tracks, t);
 }
 
 /// Represents the result of a MultiTween processed by an animation.
@@ -154,7 +154,7 @@ class MultiTweenValues<P> {
 }
 
 class _TweenTrack {
-  final tweensWithDuration = List<_TweenWithDuration>();
+  final tweensWithDuration = <_TweenWithDuration>[];
 
   void add(Animatable tween, Duration duration) {
     tweensWithDuration.add(_TweenWithDuration(tween, duration));
